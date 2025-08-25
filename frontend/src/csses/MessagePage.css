@@ -1,0 +1,96 @@
+/* MessagePage.css */
+.message-page {
+    min-height: 100vh;
+    background: var(--background);
+    font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-dark);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .message-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .message-section {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  
+  .message-table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  
+  .message-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .message-table th {
+    background: var(--primary-light);
+    color: white;
+    text-align: left;
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .message-table th:first-child {
+    border-top-left-radius: var(--radius);
+  }
+  
+  .message-table th:last-child {
+    border-top-right-radius: var(--radius);
+  }
+  
+  .message-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .message-table tr:hover {
+    background-color: rgba(94, 53, 177, 0.05);
+  }
+  
+  .empty-messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: var(--text-light);
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .message-section {
+      padding: 16px;
+    }
+    
+    .message-table td, 
+    .message-table th {
+      padding: 10px 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .message-table td, 
+    .message-table th {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    
+    .message-section {
+      padding: 12px;
+    }
+  }
+  

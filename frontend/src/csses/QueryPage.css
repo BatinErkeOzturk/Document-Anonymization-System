@@ -1,0 +1,126 @@
+/* QueryPage.css */
+.query-page {
+    min-height: 100vh;
+    background: var(--background);
+    font-family: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-dark);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .query-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .query-section, .results-section {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 25px;
+    box-shadow: var(--shadow);
+  }
+  
+  .query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--primary-dark);
+  }
+  
+  .form-group input {
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 16px;
+    background-color: var(--background);
+    color: var(--text-dark);
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 2px rgba(94, 53, 177, 0.2);
+  }
+  
+  .form-group input[readonly] {
+    background-color: var(--background);
+    cursor: default;
+  }
+  
+  .query-button {
+    align-self: flex-start;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .query-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .query-button:active {
+    transform: translateY(0);
+  }
+  
+  .results-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .empty-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    color: var(--text-light);
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--background);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .results-content {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .query-section, .results-section {
+      padding: 20px 15px;
+    }
+    
+    .form-group input {
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+    
+    .query-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
